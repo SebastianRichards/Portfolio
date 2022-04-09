@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<button id="downloadbtncv" type="button" class="btn btn-primary">Download
+  <a href="{% static 'webapp/images/sebastianRichardsCV.pdf' %}" download cv>
+  </a>
+</button>
+
+<img class="cv" src="{% static 'webapp/images/sebastianRichardsCV.png' %}">
+{% endblock %}

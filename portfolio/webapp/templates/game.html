@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="containerGame">
+    <div id="videoCus">
+        <video controls class="vid">
+            <source src="{% static 'webapp/images/dttbclip.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+    <div id="firstCol">
+        <h2>Download:</h2>
+        <div>   
+            <p>To play the game download this <a href="{% static 'webapp/images/Game.zip' %}">zip file</a>
+            then open the game folder and click on the exec file 'game', highlighted in blue shown below.
+            (You may have to wait 10 seconds for the game to load)</p>
+        </div>
+    </div>
+    <div id="secondCol">
+        <img class="imageResizeGame" src="{% static 'webapp/images/gamePicTut.png' %}">
+    </div>
+    <div id="thirdCol">
+       third Col
+    </div>
+</div>
+
+
+{% endblock %}

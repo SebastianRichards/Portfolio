@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="imageSection">
+    <div class="container paddingContainer">
+      <div class="row">
+        <div class="col-4 borderEraser">
+          <img class="imageResize" src="{% static 'webapp/images/srblogthumb.jpg' %}">
+          <div class="info">
+            <a class="btn btn-dark alignLeft" href="https://sebastianrichardsblog.herokuapp.com/home">View Project</a>
+            <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/FlaskBlog">View Code</a>
+            <a href="#">
+              <img class="iconImage" id="info1" src="{% static 'webapp/images/infoIcon.png' %}">
+            </a>
+          </div>
+        </div>
+        <div class="col-4 borderEraser">
+            <img class="imageResize" src="{% static 'webapp/images/digitaltwin.jpeg' %}">
+            <div class="info">
+              <a class="btn btn-dark alignLeft" href="{% url 'digitaltwin' %}">View Project</a>
+              <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/DigitalTwin">View Code</a>
+              <a href="#">
+                <img class="iconImage" id="info2" src="{% static 'webapp/images/infoIcon.png' %}">
+              </a>
+            </div>
+        </div>
+        <div class="col-4 borderEraser">
+          <img class="imageResize" src="{% static 'webapp/images/mariopicthumb.jpg' %}">
+          <div class="info">
+            <a class="btn btn-dark alignLeft" href="{% url 'game' %}">View Project</a>
+            <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/game">View Code</a>
+            <a href="#">
+              <img class="iconImage" id="info3" src="{% static 'webapp/images/infoIcon.png' %}">
+            </a>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+
+<div class="projectText">
+  <h1 id="divBox0">Click Info</h1>
+  <div id="divBox1">
+    <h1>Flask Social Networking Microblogging Service</h1>
+    <p>This website was built with flask, python, css, html, bootstrap, and sqlite uploaded by heroku</p>
+  </div>
+  <h1 id="divBox2">Info 2</h1>
+  <h1 id="divBox3">Info 3</h1>
+
+</div>
+
+
+
+<script>
+  const infoBtn1 = document.querySelector('#info1');
+  const divBox1 = document.querySelector('#divBox1');
+  const divBoxes = document.querySelector('#divBoxes');
+  const divBox0 = document.querySelector('#divBox0')
+  const infoBtn2 = document.querySelector('#info2');
+  const divBox2 = document.querySelector('#divBox2');
+  const infoBtn3 = document.querySelector('#info3');
+  const divBox3 = document.querySelector('#divBox3');
+  infoBtn1.onclick = () => {
+    if (divBox1.style.display)
+      { divBox1.style.display = ((divBox1.style.display!='none') ? 'none' : 'block');
+      divBox0.style.display = 'none';
+      divBox2.style.display = 'none';
+      divBox3.style.display = 'none';
+    } else {
+      divBox1.style.display = 'block';
+      divBox0.style.display = 'none';
+      divBox2.style.display = 'none';
+      divBox3.style.display = 'none';
+    }
+  }
+    
+  infoBtn2.onclick = () => {
+    if (divBox2.style.display)
+      { divBox2.style.display = ((divBox2.style.display!='none') ? 'none' : 'block');
+      divBox0.style.display = 'none';
+      divBox1.style.display = 'none';
+      divBox3.style.display = 'none';
+    } else {
+      divBox2.style.display = 'block';
+      divBox0.style.display = 'none';
+      divBox1.style.display = 'none';
+      divBox3.style.display = 'none';
+    }
+  }
+
+  
+  infoBtn3.onclick = () => {
+    if (divBox3.style.display)
+      { divBox3.style.display = ((divBox3.style.display!='none') ? 'none' : 'block');
+      divBox0.style.display = 'none';
+      divBox2.style.display = 'none';
+      divBox1.style.display = 'none';
+    } else {
+      divBox3.style.display = 'block';
+      divBox0.style.display = 'none';
+      divBox2.style.display = 'none';
+      divBox1.style.display = 'none';
+    }
+  }
+
+</script>
+
+
+  
+{% endblock %}
