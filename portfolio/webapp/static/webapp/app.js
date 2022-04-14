@@ -1,3 +1,5 @@
+
+
 const infoBtn1 = document.querySelector('#info1');
 const divBox1 = document.querySelector('#divBox1');
 const divBoxes = document.querySelector('#divBoxes');
@@ -49,9 +51,4 @@ infoBtn3.onclick = () => {
     }
 }
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-tl.to(".texty", { y: "0%", duration: 1, stagger: 0.25 });
-tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+gsap.from('.intro', {opacity:0, duration: 1})

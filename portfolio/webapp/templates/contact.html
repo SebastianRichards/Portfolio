@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="text-center">Contact Page</h1>
-<p class="font-weight-light text-light">Email: sebastianrichards@me.com</p>
-<p class="font-weight-light text-light">Phone: +44 7542930048</p>
+<div class="contactPage">
+    <h1 class="text-center">Contact Page</h1>
+    <p class="font-weight-light text-light">Email: sebastianrichards@me.com</p>
+    <p class="font-weight-light text-light">Phone: +44 7542930048</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+
+<script>
+   
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+        
+    tl.fromTo(".contactPage", { opacity: 0 }, { opacity: 1, duration: 0.2 });
+
+
+</script>
 {% endblock %}

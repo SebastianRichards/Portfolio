@@ -2,107 +2,76 @@
 {% load static %}
 
 {% block content %}
-<div class="imageSection">
-    <div class="container paddingContainer">
-      <div class="row">
-        <div class="col-4 borderEraser">
-          <img class="imageResize" src="{% static 'webapp/images/srblogthumb.jpg' %}">
-          <div class="info">
-            <a class="btn btn-dark alignLeft" href="https://sebastianrichardsblog.herokuapp.com/home">View Project</a>
-            <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/FlaskBlog">View Code</a>
-            <a href="#">
-              <img class="iconImage" id="info1" src="{% static 'webapp/images/infoIcon.png' %}">
-            </a>
-          </div>
-        </div>
-        <div class="col-4 borderEraser">
-            <img class="imageResize" src="{% static 'webapp/images/digitaltwin.jpeg' %}">
+<div class="projectsPage">
+  <div class="imageSection">
+      <div class="container paddingContainer">
+        <div class="row">
+          <div class="col-4 borderEraser">
+            <img class="imageResize" src="{% static 'webapp/images/srblogthumb.jpg' %}">
             <div class="info">
-              <a class="btn btn-dark alignLeft" href="{% url 'digitaltwin' %}">View Project</a>
-              <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/DigitalTwin">View Code</a>
+              <a class="btn btn-dark alignLeft" href="https://sebastianrichardsblog.herokuapp.com/home">View Project</a>
+              <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/FlaskBlog">View Code</a>
               <a href="#">
-                <img class="iconImage" id="info2" src="{% static 'webapp/images/infoIcon.png' %}">
+                <img class="iconImage" id="info1" src="{% static 'webapp/images/infoIcon.png' %}">
               </a>
             </div>
-        </div>
-        <div class="col-4 borderEraser">
-          <img class="imageResize" src="{% static 'webapp/images/mariopicthumb.jpg' %}">
-          <div class="info">
-            <a class="btn btn-dark alignLeft" href="{% url 'game' %}">View Project</a>
-            <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/game">View Code</a>
-            <a href="#">
-              <img class="iconImage" id="info3" src="{% static 'webapp/images/infoIcon.png' %}">
-            </a>
+          </div>
+          <div class="col-4 borderEraser">
+              <img class="imageResize" src="{% static 'webapp/images/digitaltwin.jpeg' %}">
+              <div class="info">
+                <a class="btn btn-dark alignLeft" href="{% url 'digitaltwin' %}">View Project</a>
+                <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/DigitalTwin">View Code</a>
+                <a href="#">
+                  <img class="iconImage" id="info2" src="{% static 'webapp/images/infoIcon.png' %}">
+                </a>
+              </div>
+          </div>
+          <div class="col-4 borderEraser">
+            <img class="imageResize" src="{% static 'webapp/images/mariopicthumb.jpg' %}">
+            <div class="info">
+              <a class="btn btn-dark alignLeft" href="{% url 'game' %}">View Project</a>
+              <a class="btn btn-dark alignRight" href="https://github.com/SebastianRichards/game">View Code</a>
+              <a href="#">
+                <img class="iconImage" id="info3" src="{% static 'webapp/images/infoIcon.png' %}">
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-   </div>
-  </div>
+    </div>
+    </div>
 
-<div class="projectText">
-  <h1 id="divBox0">Click Info</h1>
-  <div id="divBox1">
-    <h1>Flask Social Networking Microblogging Service</h1>
-    <p>This website was built with flask, python, css, html, bootstrap, and sqlite uploaded by heroku</p>
+  <div class="projectText">
+    <div id="divBox0">
+      <h1>Portfolio Website Info</h1>
+      <p>This portfolio website was built with django, html, css, bootstrap, css grid, flexbox, javascript and gsap for animations.
+        To find out info about any of the projects listed above, click on their respective info icons.
+      </p>
+    </div>
+    <div id="divBox1">
+      <h1>Flask Social Networking Microblogging Service</h1>
+      <p>This website was built with flask, python, css, html, bootstrap, and sqlite uploaded by heroku</p>
+    </div>
+    <div id="divBox2">
+      <h1>Digital Twin of a Chemical Microreactor</h1>
+      <p>This digital twin uses python and OOP to allow the user to model and create digital replicas of real world microreactos</p>
+    </div>
+    <div id="divBox3">
+      <h1>Don't Take That Bait Game</h1>
+      <p>This game was built with python and the pygame module. It is inspired by flappy bird.</p>
+    </div>
+
   </div>
-  <h1 id="divBox2">Info 2</h1>
-  <h1 id="divBox3">Info 3</h1>
 
 </div>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
 
 <script>
-  const infoBtn1 = document.querySelector('#info1');
-  const divBox1 = document.querySelector('#divBox1');
-  const divBoxes = document.querySelector('#divBoxes');
-  const divBox0 = document.querySelector('#divBox0')
-  const infoBtn2 = document.querySelector('#info2');
-  const divBox2 = document.querySelector('#divBox2');
-  const infoBtn3 = document.querySelector('#info3');
-  const divBox3 = document.querySelector('#divBox3');
-  infoBtn1.onclick = () => {
-    if (divBox1.style.display)
-      { divBox1.style.display = ((divBox1.style.display!='none') ? 'none' : 'block');
-      divBox0.style.display = 'none';
-      divBox2.style.display = 'none';
-      divBox3.style.display = 'none';
-    } else {
-      divBox1.style.display = 'block';
-      divBox0.style.display = 'none';
-      divBox2.style.display = 'none';
-      divBox3.style.display = 'none';
-    }
-  }
-    
-  infoBtn2.onclick = () => {
-    if (divBox2.style.display)
-      { divBox2.style.display = ((divBox2.style.display!='none') ? 'none' : 'block');
-      divBox0.style.display = 'none';
-      divBox1.style.display = 'none';
-      divBox3.style.display = 'none';
-    } else {
-      divBox2.style.display = 'block';
-      divBox0.style.display = 'none';
-      divBox1.style.display = 'none';
-      divBox3.style.display = 'none';
-    }
-  }
+   
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+        
+    tl.fromTo(".projectsPage", { opacity: 0 }, { opacity: 1, duration: 0.2 });
 
-  
-  infoBtn3.onclick = () => {
-    if (divBox3.style.display)
-      { divBox3.style.display = ((divBox3.style.display!='none') ? 'none' : 'block');
-      divBox0.style.display = 'none';
-      divBox2.style.display = 'none';
-      divBox1.style.display = 'none';
-    } else {
-      divBox3.style.display = 'block';
-      divBox0.style.display = 'none';
-      divBox2.style.display = 'none';
-      divBox1.style.display = 'none';
-    }
-  }
 
 </script>
 

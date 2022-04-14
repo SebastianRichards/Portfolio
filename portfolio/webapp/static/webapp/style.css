@@ -1,5 +1,12 @@
 body {
     background-image: url("images/background3.jpeg");
+    color: aliceblue;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -120,7 +127,9 @@ body {
     width: 100%;
     text-align: center;
     margin-top: 2%;
-   
+    border-radius: 25px;
+    padding: 1%;
+    
 }
 
 p {
@@ -287,8 +296,18 @@ p {
    
 }
 
+.big-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: "Anybody", cursive;
+    color: aliceblue;
+  }
+
 .intro {
-    
+    background: black;
     position: fixed;
     top: 0;
     left: 0;
@@ -299,15 +318,8 @@ p {
     align-items: center;
 }
 
-.intro-text {
-    font-family: 'Anybody', cursive;
-    font-size: 3rem;
-    color: aliceblue;
-
-}
-
 .slider {
-    background: aliceblue;
+    background: rgb(22, 23, 24);
     position: fixed;
     top: 0;
     left: 0;
@@ -316,13 +328,77 @@ p {
     transform: translateY(100%);
 }
 
-
 .hide {
     background: black;
     overflow: hidden;
+    text-align: center;
 }
 
-.texty {
+.hide span {
     transform: translateY(100%);
     display: inline-block;
 }
+
+#footer {
+    margin-top: auto;
+    margin-bottom: 5px;
+    
+}
+
+#footerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "footerCol1 footerCol2 footerCol3"; 
+    grid-gap: 0.2rem;
+    grid-template-columns: 42px 42px 42px;
+    grid-template-rows: 42px;
+    justify-content: center;
+
+    
+}
+
+#gitIcon {
+
+    background-color: aliceblue;
+    border-radius: 80%;
+    max-height: 100%;
+}
+
+#mailIcon {
+    background-color: aliceblue;
+    border-radius: 50%;
+    max-height: 100%;
+
+}
+
+#linkedIcon {
+    background-color: aliceblue;
+    border-radius: 50%;
+    max-height: 100%;
+}
+
+#footerCol1 {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+#footerCol2 {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+#footerCol3 {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+#downloadbtndt {
+   margin-top: 1%;
+   margin-bottom: 1%;
+}
+

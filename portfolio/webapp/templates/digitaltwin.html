@@ -2,32 +2,34 @@
 {% load static %}
 
 {% block content %}
-<div class="slideContainerDT">
-    <span id="sliderImg1"></span>
-    <span id="sliderImg2"></span>
-    <span id="sliderImg3"></span>
-    <span id="sliderImg4"></span>
-    <span id="sliderImg5"></span>
-    <span id="sliderImg6"></span>
-    
-    <div class="imageContainerDT">
-        <img src="{% static 'webapp/images/dt1.png' %}" class="sliderImg">
-        <img src="{% static 'webapp/images/dt2.png' %}" class="sliderImg">
-        <img src="{% static 'webapp/images/dt3.png' %}" class="sliderImg">
-        <img src="{% static 'webapp/images/dt4.png' %}" class="sliderImg">
-        <img src="{% static 'webapp/images/dt5.png' %}" class="sliderImg">
-        <img src="{% static 'webapp/images/dt6.png' %}" class="sliderImg">
+<div>
+    <div class="slideContainerDT">
+        <span id="sliderImg1"></span>
+        <span id="sliderImg2"></span>
+        <span id="sliderImg3"></span>
+        <span id="sliderImg4"></span>
+        <span id="sliderImg5"></span>
+        <span id="sliderImg6"></span>
+        
+        <div class="imageContainerDT">
+            <img src="{% static 'webapp/images/dt1.png' %}" class="sliderImg">
+            <img src="{% static 'webapp/images/dt2.png' %}" class="sliderImg">
+            <img src="{% static 'webapp/images/dt3.png' %}" class="sliderImg">
+            <img src="{% static 'webapp/images/dt4.png' %}" class="sliderImg">
+            <img src="{% static 'webapp/images/dt5.png' %}" class="sliderImg">
+            <img src="{% static 'webapp/images/dt6.png' %}" class="sliderImg">
+        </div>
+        <div class="buttonContainer">
+            <a href="#sliderImg1" class="sliderButton"></a>
+            <a href="#sliderImg2" class="sliderButton"></a>
+            <a href="#sliderImg3" class="sliderButton"></a>
+            <a href="#sliderImg4" class="sliderButton"></a>
+            <a href="#sliderImg5" class="sliderButton"></a>
+            <a href="#sliderImg6" class="sliderButton"></a>
+        </div>
     </div>
-    <div class="buttonContainer">
-        <a href="#sliderImg1" class="sliderButton"></a>
-        <a href="#sliderImg2" class="sliderButton"></a>
-        <a href="#sliderImg3" class="sliderButton"></a>
-        <a href="#sliderImg4" class="sliderButton"></a>
-        <a href="#sliderImg5" class="sliderButton"></a>
-        <a href="#sliderImg6" class="sliderButton"></a>
-    </div>
+    <button id="downloadbtndt" type="button" class="btn btn-primary">Download
+        <a href="{% static 'webapp/images/DigitalTwin.zip' %}"></a>
+    </button>
 </div>
-<button id="downloadbtndt" type="button" class="btn btn-primary">Download
-    <a href="{% static 'webapp/images/DigitalTwin.zip' %}"></a>
-</button>
 {% endblock %}
