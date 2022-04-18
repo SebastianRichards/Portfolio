@@ -52,15 +52,7 @@ body {
 }
 
 
-.alignRight {
-    float: right;
-    justify-content: center;
-}
 
-.alignLeft {
-    float: left;
-    justify-content: center;
-}
 
 .alignBottom {
     text-align: center;
@@ -76,6 +68,14 @@ body {
 
 
 .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "btn1 btn2"
+        "infoBtn infoBtn";
+    grid-column-gap: 2rem;
+    height: 20px;
     padding: 4%;
     z-index: 9;
     position: absolute;
@@ -84,12 +84,19 @@ body {
     right: 0%;
 }
 
+.infoBtn {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+}
+
 .iconImage {
-    max-height: 10%;
-    max-width: 10%;
+    max-height: 30%;
+    max-width: 30%;
     border-radius: 50%;
     background-color: aliceblue;
-    transform: translate(105%,70%);
+    
+   
     
    
     
