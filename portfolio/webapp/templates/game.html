@@ -9,18 +9,22 @@
         </video>
     </div>
     <div id="firstCol">
+        <h1>Info:</h1>
+        Using python and Pygame this game models rectangles around the dimensions of the imported images (drawn in pixel art).
+        The game runs on an infinite loop and any detected collisions with the shark object and the surrounding area will result in game over.
+        The game spawns hooks and a monster where monster has a 1/13 chance of spawning with the help of the random module selecting from a list of 13 items (12 hooks and 1 monster).
+        Every object has a velocity that travels through the page right to left. This, alongside the coral animation on the floor gives the illusion that the shark is moving forward.
+        Since the game is coded in python it unforunately can't be run in the browser and needs to be downloaded. Below are the instructions.
+    
+    </div>
+    <div id="secondCol">
         <h2>Download:</h2>
         <div>   
             <p>To play the game download this <a href="{% static 'webapp/images/Game.zip' %}">zip file</a>
             then open the game folder and click on the exec file 'game', highlighted in blue shown below.
             (You may have to wait 10 seconds for the game to load)</p>
         </div>
-    </div>
-    <div id="secondCol">
         <img class="imageResizeGame" src="{% static 'webapp/images/gamePicTut.png' %}">
-    </div>
-    <div id="thirdCol">
-       third Col
     </div>
 </div>
 

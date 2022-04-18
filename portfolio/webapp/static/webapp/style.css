@@ -139,6 +139,12 @@ body {
     
 }
 
+
+        
+        
+
+
+
 p {
     font-size: medium;
 }
@@ -174,14 +180,16 @@ p {
 
 .containerGame {
     display: grid;
-    height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "video firstCol"
-        "video secondCol"
-        "video thirdCol";
+        "video secondCol";
     grid-gap: 0.2rem;
+    padding-bottom: 2%;
     }
     
 
@@ -191,6 +199,8 @@ p {
     border: 3px solid aliceblue;
     text-align: center;
     border-radius: 25px;
+    
+    
    
 }
 
@@ -198,26 +208,38 @@ p {
     grid-area: secondCol;
     border: 3px solid aliceblue;
     border-radius: 25px;
-    width: 850px;
+    width: 100%;
     max-height: 100%;
     max-width: 100%;
+    text-align: center;
     
 
 }
 
 
-#thirdCol {
-    grid-area: thirdCol;
-    border: 3px solid aliceblue;
-    border-radius: 25px;
-}
+
 
 #videoCus {
     grid-area: video;
+    
    
 }
 
 @media only screen and (max-width: 770px) {
+    
+
+    .mobileHeightz{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+}
+
+@media only screen and (max-width: 990px) {
+    .projectText{
+        margin-top: 5%;
+    }
+
     .containerGame{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -227,12 +249,13 @@ p {
             "secondCol"
             "thirdCol";
     }
-    
 }
 
 .imageResizeGame {
    max-height: 100%;
    max-width: 100%;
+   padding-top: 15%;
+   border-radius: 7%;
    
    
 }
@@ -423,4 +446,16 @@ p {
     margin-top: 14%;
     text-align: center;
 
+}
+
+.contactPage {
+    text-align: center;
+}
+
+.contactFont {
+    font-family: "Anybody", cursive;
+}
+
+.contactDetails {
+    margin-top: 10%
 }
