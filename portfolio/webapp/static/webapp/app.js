@@ -51,4 +51,6 @@ infoBtn3.onclick = () => {
     }
 }
 
-gsap.from('.intro', {opacity:0, duration: 1})
+
+
+
